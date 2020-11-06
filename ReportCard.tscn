@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://SemesterTabs.gd" type="Script" id=2]
+
+[node name="ReportCard" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.88776
+margin_bottom = -1.8877
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterPanel" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -420.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterVBox" type="VBoxContainer" parent="MasterPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1493.0
+margin_bottom = 1073.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TitleLabel" type="RichTextLabel" parent="MasterPanel/MasterVBox"]
+margin_right = 1486.0
+margin_bottom = 176.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "[center]Your Report Card[/center]"
+text = "Your Report Card"
+
+[node name="SemesterTabs" type="TabContainer" parent="MasterPanel/MasterVBox"]
+margin_top = 180.0
+margin_right = 1486.0
+margin_bottom = 885.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+tab_align = 0
+script = ExtResource( 2 )
+
+[node name="ExtrasVBox" type="HBoxContainer" parent="MasterPanel/MasterVBox"]
+margin_top = 889.0
+margin_right = 1486.0
+margin_bottom = 1066.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TotalGPA" type="Label" parent="MasterPanel/MasterVBox/ExtrasVBox"]
+margin_top = 81.0
+margin_right = 741.0
+margin_bottom = 95.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Total GPA:"
+
+[node name="TotalECTS" type="Label" parent="MasterPanel/MasterVBox/ExtrasVBox"]
+margin_left = 745.0
+margin_top = 81.0
+margin_right = 1486.0
+margin_bottom = 95.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Total ECTS: "

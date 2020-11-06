@@ -1,0 +1,39 @@
+{
+  "223971": [
+    {
+      "semester_no": 1,
+      "subjects": [
+          {"name": "Introduction to Computer Science", "grade": 4, "tutor": "dr hab. inż. Lidia Jackowska-Strumiłło", "ects": 6},
+          {"name": "Algorithms and Data Structures", "grade": 4, "tutor": "dr hab. inż. Lidia Jackowska-Strumiłło", "ects": 6},
+        ],
+    },
+    {
+      "semester_no": 2,
+      "subjects": [
+        {"name": "Programming and Data Structures in C", "grade": 5, "tutor": "dr hab. inż. Lidia Jackowska-Strumiłło", "ects": 6},
+        {"name": "Electrical Circuits and Measurements", "grade": 4, "tutor": "dr hab. inż. Lidia Jackowska-Strumiłło", "ects": 6},
+      ]
+    },
+    {
+      "semester_no": 3,
+      "subjects": [
+        {"name": "Object Oriented Programming in C++", "grade": 5, "tutor": "dr hab. inż. Lidia Jackowska-Strumiłło", "ects": 6},
+        {"name": "Electronics Fundamentals", "grade": 4.5, "tutor": "dr hab. inż. Lidia Jackowska-Strumiłło", "ects": 6},
+      ]
+    },
+    {
+      "semester_no": 4,
+      "subjects": [
+        {"name": "Interactive Web Applications", "grade": 5, "tutor": "dr hab. inż. Lidia Jackowska-Strumiłło", "ects": 6},
+        {"name": "Computer Archtecture", "grade": 5, "tutor": "dr hab. inż. Lidia Jackowska-Strumiłło", "ects": 6},
+      ]
+    },
+    {
+      "semester_no": 5,
+      "subjects": [
+        {"name": "Embedded Systems", "grade": 5, "tutor": "dr hab. inż. Lidia Jackowska-Strumiłło", "ects": 6},
+        {"name": "Computer Graphics", "grade": 4, "tutor": "dr hab. inż. Lidia Jackowska-Strumiłło", "ects": 6},
+      ]
+    },
+  ]
+}
