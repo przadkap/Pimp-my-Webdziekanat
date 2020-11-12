@@ -1,0 +1,117 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://LoginButton.gd" type="Script" id=1]
+[ext_resource path="res://Login.gd" type="Script" id=2]
+
+[node name="Login" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.68176
+margin_top = -3.68176
+margin_right = 6.68176
+margin_bottom = -3.68176
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 13.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterPanel" type="PanelContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -200.0
+margin_right = 300.0
+margin_bottom = 200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MasterPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 593.0
+margin_bottom = 393.0
+custom_constants/margin_right = 15
+custom_constants/margin_top = 15
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 15
+
+[node name="MasterVBox" type="VBoxContainer" parent="MasterPanel/MarginContainer"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 571.0
+margin_bottom = 371.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 9
+
+[node name="TitleLabel" type="Label" parent="MasterPanel/MarginContainer/MasterVBox"]
+margin_top = -1.0
+margin_right = 556.0
+margin_bottom = 49.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+text = "Log in with your student credentials to use WEBDziekanat."
+align = 1
+valign = 1
+
+[node name="IDVBox" type="VBoxContainer" parent="MasterPanel/MarginContainer/MasterVBox"]
+margin_top = 59.0
+margin_right = 556.0
+margin_bottom = 163.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+custom_constants/separation = 8
+alignment = 1
+
+[node name="IDLabel" type="Label" parent="MasterPanel/MarginContainer/MasterVBox/IDVBox"]
+margin_top = 26.0
+margin_right = 556.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+text = "ID:"
+valign = 2
+
+[node name="IDInput" type="LineEdit" parent="MasterPanel/MarginContainer/MasterVBox/IDVBox"]
+margin_top = 48.0
+margin_right = 556.0
+margin_bottom = 78.0
+rect_min_size = Vector2( 0, 30 )
+
+[node name="PasswordVBox" type="VBoxContainer" parent="MasterPanel/MarginContainer/MasterVBox"]
+margin_top = 172.0
+margin_right = 556.0
+margin_bottom = 277.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+custom_constants/separation = 8
+
+[node name="PasswordLabel" type="Label" parent="MasterPanel/MarginContainer/MasterVBox/PasswordVBox"]
+margin_right = 556.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Password:"
+valign = 1
+
+[node name="PasswordInput" type="LineEdit" parent="MasterPanel/MarginContainer/MasterVBox/PasswordVBox"]
+margin_top = 22.0
+margin_right = 556.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 0, 30 )
+secret = true
+
+[node name="LoginButton" type="Button" parent="MasterPanel/MarginContainer/MasterVBox"]
+margin_top = 286.0
+margin_right = 556.0
+margin_bottom = 356.0
+size_flags_vertical = 3
+text = "Log in"
+script = ExtResource( 1 )
+[connection signal="pressed" from="MasterPanel/MarginContainer/MasterVBox/LoginButton" to="." method="_on_LoginButton_pressed"]

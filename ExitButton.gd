@@ -12,4 +12,5 @@ func _ready():
 
 
 func _pressed():
+	GlobalInfo.clear_current_user()
 	get_tree().quit()

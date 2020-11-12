@@ -2,18 +2,17 @@ extends TabContainer
 
 var user = "223971"
 var grade_data = {}
-
+var subject_header_data = {"name": "Name", "grade": "Grade", "tutor": "Tutor", "ects": "ECTS"}
 
 const SubjectContainer = preload("SubjectContainer.gd")
-#class_name SubjectContainer
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	var file = File.new()
-	file.open("res://grades.json", file.READ)
-	var content = file.get_as_text()
-	var content_json = JSON.parse(content)
-	grade_data = content_json.result
+#	var file = File.new()
+#	file.open("res://grades.json", file.READ)
+#	var content = file.get_as_text()
+#	var content_json = JSON.parse(content)
+#	grade_data = content_json.result
+	grade_data = GlobalFunctions.json_file_to_dict("res://grades.json")
 	for semester in grade_data[user]:
 		
 		var semester_container = VBoxContainer.new()
@@ -21,10 +20,13 @@ func _ready():
 		semester_container.name = "Semester " + arabic_to_roman(int(semester["semester_no"]))
 		semester_container.size_flags_horizontal = SIZE_EXPAND
 		add_child(semester_container)
-
+		
+		var subject_header = SubjectContainer.new(subject_header_data)
+		subject_header.set_custom_minimum_size(Vector2(0, 50))
+		semester_container.add_child(subject_header)
+		
 		for subject in semester["subjects"]:
 			var subject_container = SubjectContainer.new(subject)
-#			subject_container.rect_min_size(0, 50)
 			subject_container.set_custom_minimum_size(Vector2(0, 50))
 			semester_container.add_child(subject_container)
 
