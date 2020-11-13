@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://ExitButton.gd" type="Script" id=2]
@@ -7,10 +7,12 @@
 [ext_resource path="res://MasterVBox.gd" type="Script" id=5]
 [ext_resource path="res://Login.tscn" type="PackedScene" id=6]
 [ext_resource path="res://LogOutButton.gd" type="Script" id=7]
+[ext_resource path="res://Master.gd" type="Script" id=8]
 
 [node name="Master" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -39,21 +41,22 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HomeButton" type="Button" parent="MasterPanel/MasterVBox/TitleBarContainer"]
-margin_right = 247.0
+margin_right = 271.0
 margin_bottom = 74.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.5
 text = "WEBdziekanat"
 align = 0
 
-[node name="SeparatorPanel" type="Panel" parent="MasterPanel/MasterVBox/TitleBarContainer"]
-margin_left = 251.0
-margin_right = 1568.0
+[node name="Separator" type="Control" parent="MasterPanel/MasterVBox/TitleBarContainer"]
+margin_left = 275.0
+margin_right = 1721.0
 margin_bottom = 74.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 8.0
 
 [node name="LanguageButton" type="Button" parent="MasterPanel/MasterVBox/TitleBarContainer"]
+visible = false
 margin_left = 1572.0
 margin_right = 1737.0
 margin_bottom = 74.0
@@ -61,7 +64,7 @@ size_flags_horizontal = 3
 text = "Change Language"
 
 [node name="ExitButton" type="Button" parent="MasterPanel/MasterVBox/TitleBarContainer"]
-margin_left = 1741.0
+margin_left = 1725.0
 margin_right = 1906.0
 margin_bottom = 74.0
 size_flags_horizontal = 3
@@ -161,6 +164,11 @@ margin_left = 0.0
 margin_top = 578.0
 margin_right = 1906.0
 margin_bottom = 1066.0
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+margin_right = 200.0
+margin_bottom = 70.0
+[connection signal="pressed" from="MasterPanel/MasterVBox/TitleBarContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="content_changed" from="MasterPanel/MasterVBox/ContentContainer/ButtonList" to="MasterPanel/MasterVBox/ContentContainer/ContentPanel" method="_on_ButtonList_content_changed"]
 [connection signal="logout" from="MasterPanel/MasterVBox/ContentContainer/ButtonList" to="MasterPanel/MasterVBox" method="_on_ButtonList_logout"]
 [connection signal="pressed" from="MasterPanel/MasterVBox/ContentContainer/ButtonList/ReportCardButton" to="MasterPanel/MasterVBox/ContentContainer/ButtonList" method="_on_ReportCardButton_pressed"]

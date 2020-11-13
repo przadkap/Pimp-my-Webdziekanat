@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Popup",
+"class": "TimedPopup",
+"language": "GDScript",
+"path": "res://TimedPopup.gd"
+} ]
 _global_script_class_icons={
-
+"TimedPopup": ""
 }
 
 [application]
@@ -32,12 +37,16 @@ GlobalFunctions="*res://GlobalFunctions.gd"
 
 window/size/width=1920
 window/size/height=1080
-window/size/fullscreen=true
+window/size/borderless=true
 window/handheld/orientation="portrait"
 
 [editor_plugins]
 
 enabled=PoolStringArray( "github-integration" )
+
+[gui]
+
+theme/custom_font="res://Inter.tres"
 
 [rendering]
 
