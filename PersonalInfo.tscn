@@ -1,0 +1,488 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://VoivodeshipEdit.gd" type="Script" id=1]
+[ext_resource path="res://FixedInfo.gd" type="Script" id=2]
+[ext_resource path="res://EditableInfo.gd" type="Script" id=3]
+
+[node name="PersonalInfo" type="Control"]
+anchor_left = 0.000520833
+anchor_right = 1.00052
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="MasterPanel" type="PanelContainer" parent="."]
+anchor_right = 0.78125
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="MasterVBox" type="VBoxContainer" parent="MasterPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1493.0
+margin_bottom = 1073.0
+
+[node name="TitleLabel" type="Label" parent="MasterPanel/MasterVBox"]
+margin_top = 67.0
+margin_right = 1486.0
+margin_bottom = 117.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Your personal information"
+align = 1
+valign = 1
+
+[node name="MasterHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox"]
+margin_top = 188.0
+margin_right = 1486.0
+margin_bottom = 1066.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.75
+
+[node name="FixedInfoMargin" type="MarginContainer" parent="MasterPanel/MasterVBox/MasterHBox"]
+margin_right = 741.0
+margin_bottom = 878.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 15
+custom_constants/margin_top = 15
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 15
+
+[node name="FixedInfo" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 726.0
+margin_bottom = 863.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+script = ExtResource( 2 )
+
+[node name="TitleLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
+margin_right = 711.0
+margin_bottom = 20.0
+text = "Your personal details:"
+
+[node name="FirstNameVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
+margin_top = 40.0
+margin_right = 711.0
+margin_bottom = 98.0
+custom_constants/separation = 8
+
+[node name="FirstNameLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/FirstNameVBox"]
+margin_right = 711.0
+margin_bottom = 20.0
+text = "First name:"
+
+[node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/FirstNameVBox"]
+margin_top = 28.0
+margin_right = 711.0
+margin_bottom = 58.0
+
+[node name="FirstNameEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/FirstNameVBox/InputHBox"]
+margin_right = 353.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+editable = false
+
+[node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/FirstNameVBox/InputHBox"]
+margin_left = 357.0
+margin_right = 711.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LastNameVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
+margin_top = 118.0
+margin_right = 711.0
+margin_bottom = 176.0
+custom_constants/separation = 8
+
+[node name="LastNameLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/LastNameVBox"]
+margin_right = 711.0
+margin_bottom = 20.0
+text = "Last name:"
+
+[node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/LastNameVBox"]
+margin_top = 28.0
+margin_right = 711.0
+margin_bottom = 58.0
+
+[node name="LastNameEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/LastNameVBox/InputHBox"]
+margin_right = 353.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+editable = false
+
+[node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/LastNameVBox/InputHBox"]
+margin_left = 357.0
+margin_right = 711.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="IndexVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
+margin_top = 196.0
+margin_right = 711.0
+margin_bottom = 254.0
+custom_constants/separation = 8
+
+[node name="IndexLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/IndexVBox"]
+margin_right = 711.0
+margin_bottom = 20.0
+text = "Index number:"
+
+[node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/IndexVBox"]
+margin_top = 28.0
+margin_right = 711.0
+margin_bottom = 58.0
+
+[node name="IndexEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/IndexVBox/InputHBox"]
+margin_right = 353.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+editable = false
+
+[node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/IndexVBox/InputHBox"]
+margin_left = 357.0
+margin_right = 711.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BirthDateVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
+margin_top = 274.0
+margin_right = 711.0
+margin_bottom = 332.0
+custom_constants/separation = 8
+
+[node name="BirthDateLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/BirthDateVBox"]
+margin_right = 711.0
+margin_bottom = 20.0
+text = "Birth date:"
+
+[node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/BirthDateVBox"]
+margin_top = 28.0
+margin_right = 711.0
+margin_bottom = 58.0
+
+[node name="BirthDateEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/BirthDateVBox/InputHBox"]
+margin_right = 353.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+editable = false
+
+[node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/BirthDateVBox/InputHBox"]
+margin_left = 357.0
+margin_right = 711.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PESELVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
+margin_top = 352.0
+margin_right = 711.0
+margin_bottom = 410.0
+custom_constants/separation = 8
+
+[node name="PESELLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/PESELVBox"]
+margin_right = 711.0
+margin_bottom = 20.0
+text = "PESEL:"
+
+[node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/PESELVBox"]
+margin_top = 28.0
+margin_right = 711.0
+margin_bottom = 58.0
+
+[node name="PESELEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/PESELVBox/InputHBox"]
+margin_right = 353.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+editable = false
+
+[node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/PESELVBox/InputHBox"]
+margin_left = 357.0
+margin_right = 711.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
+margin_top = 430.0
+margin_right = 711.0
+margin_bottom = 430.0
+
+[node name="Note" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
+margin_top = 450.0
+margin_right = 711.0
+margin_bottom = 516.0
+text = "Note: You cannot change these details yourself.
+In order to make changes to these details,
+please contact your faculty's Dean's Office."
+
+[node name="EditableInfoMargin" type="MarginContainer" parent="MasterPanel/MasterVBox/MasterHBox"]
+margin_left = 745.0
+margin_right = 1486.0
+margin_bottom = 878.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 15
+custom_constants/margin_top = 15
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 15
+
+[node name="EditableInfo" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 726.0
+margin_bottom = 863.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+script = ExtResource( 3 )
+
+[node name="TitleLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo"]
+margin_right = 711.0
+margin_bottom = 20.0
+text = "Correspondance address details:"
+
+[node name="StreetVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo"]
+margin_top = 40.0
+margin_right = 711.0
+margin_bottom = 98.0
+custom_constants/separation = 8
+
+[node name="StreetLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/StreetVBox"]
+margin_right = 711.0
+margin_bottom = 20.0
+text = "Street name:"
+
+[node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/StreetVBox"]
+margin_top = 28.0
+margin_right = 711.0
+margin_bottom = 58.0
+
+[node name="StreetEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/StreetVBox/InputHBox"]
+margin_right = 353.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+editable = false
+
+[node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/StreetVBox/InputHBox"]
+margin_left = 357.0
+margin_right = 711.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BuildingVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo"]
+margin_top = 118.0
+margin_right = 711.0
+margin_bottom = 176.0
+custom_constants/separation = 8
+
+[node name="BuildingLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/BuildingVBox"]
+margin_right = 711.0
+margin_bottom = 20.0
+text = "Building / Home number:"
+
+[node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/BuildingVBox"]
+margin_top = 28.0
+margin_right = 711.0
+margin_bottom = 58.0
+
+[node name="BuildingEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/BuildingVBox/InputHBox"]
+margin_right = 353.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+editable = false
+
+[node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/BuildingVBox/InputHBox"]
+margin_left = 357.0
+margin_right = 711.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TownVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo"]
+margin_top = 196.0
+margin_right = 711.0
+margin_bottom = 254.0
+custom_constants/separation = 8
+
+[node name="TownLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/TownVBox"]
+margin_right = 711.0
+margin_bottom = 20.0
+text = "Town:"
+
+[node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/TownVBox"]
+margin_top = 28.0
+margin_right = 711.0
+margin_bottom = 58.0
+
+[node name="TownEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/TownVBox/InputHBox"]
+margin_right = 353.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+editable = false
+
+[node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/TownVBox/InputHBox"]
+margin_left = 357.0
+margin_right = 711.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VoivodeshipVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo"]
+margin_top = 274.0
+margin_right = 711.0
+margin_bottom = 328.0
+custom_constants/separation = 8
+
+[node name="VoivodeshipLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/VoivodeshipVBox"]
+margin_right = 711.0
+margin_bottom = 20.0
+text = "Voivodeship:"
+
+[node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/VoivodeshipVBox"]
+margin_top = 28.0
+margin_right = 711.0
+margin_bottom = 54.0
+
+[node name="VoivodeshipEdit" type="OptionButton" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/VoivodeshipVBox/InputHBox"]
+margin_right = 353.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+disabled = true
+text = "choose"
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/VoivodeshipVBox/InputHBox"]
+margin_left = 357.0
+margin_right = 711.0
+margin_bottom = 26.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PostalCodeVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo"]
+margin_top = 348.0
+margin_right = 711.0
+margin_bottom = 406.0
+custom_constants/separation = 8
+
+[node name="PostalCodeLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/PostalCodeVBox"]
+margin_right = 711.0
+margin_bottom = 20.0
+text = "Postal code:"
+
+[node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/PostalCodeVBox"]
+margin_top = 28.0
+margin_right = 711.0
+margin_bottom = 58.0
+
+[node name="PostalCodeEdit1" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/PostalCodeVBox/InputHBox"]
+margin_right = 70.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_length = 2
+editable = false
+
+[node name="Hyphen" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/PostalCodeVBox/InputHBox"]
+margin_left = 74.0
+margin_top = 5.0
+margin_right = 81.0
+margin_bottom = 25.0
+size_flags_vertical = 6
+text = "-"
+align = 1
+
+[node name="PostalCodeEdit2" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/PostalCodeVBox/InputHBox"]
+margin_left = 85.0
+margin_right = 221.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.25
+max_length = 3
+editable = false
+
+[node name="Control2" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/PostalCodeVBox/InputHBox"]
+margin_left = 225.0
+margin_right = 711.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
+
+[node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo"]
+margin_top = 426.0
+margin_right = 711.0
+margin_bottom = 426.0
+
+[node name="Buttons" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo"]
+margin_top = 446.0
+margin_right = 711.0
+margin_bottom = 472.0
+
+[node name="EnableEditButton" type="Button" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/Buttons"]
+margin_right = 94.0
+margin_bottom = 26.0
+text = "Edit details"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/Buttons"]
+margin_left = 98.0
+margin_right = 108.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 10, 0 )
+
+[node name="SaveChangesButton" type="Button" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/Buttons"]
+margin_left = 112.0
+margin_right = 228.0
+margin_bottom = 26.0
+disabled = true
+text = "Save changes"
+
+[node name="Control2" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/Buttons"]
+margin_left = 232.0
+margin_right = 242.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 10, 0 )
+
+[node name="DiscardChangesButton" type="Button" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/Buttons"]
+margin_left = 246.0
+margin_right = 381.0
+margin_bottom = 26.0
+disabled = true
+text = "Discard changes"
+
+[node name="Note" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo"]
+margin_top = 492.0
+margin_right = 711.0
+margin_bottom = 512.0
+size_flags_horizontal = 3
+text = "Note: Please keep these details up to date."
+[connection signal="pressed" from="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/Buttons/EnableEditButton" to="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo" method="_on_EnableEditButton_pressed"]
+[connection signal="pressed" from="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/Buttons/SaveChangesButton" to="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo" method="_on_SaveChangesButton_pressed"]
+[connection signal="pressed" from="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo/Buttons/DiscardChangesButton" to="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo" method="_on_DiscardChangesButton_pressed"]

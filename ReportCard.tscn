@@ -6,17 +6,19 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -1.88776
-margin_bottom = -1.8877
+margin_right = 0.00012207
+margin_bottom = -1.88782
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MasterPanel" type="PanelContainer" parent="."]
-anchor_right = 1.0
+anchor_right = 0.78125
 anchor_bottom = 1.0
-margin_right = -420.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="MasterVBox" type="VBoxContainer" parent="MasterPanel"]
@@ -54,18 +56,18 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TotalGPA" type="Label" parent="MasterPanel/MasterVBox/ExtrasVBox"]
-margin_top = 81.0
+margin_top = 78.0
 margin_right = 741.0
-margin_bottom = 95.0
+margin_bottom = 98.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Total GPA:"
 
 [node name="TotalECTS" type="Label" parent="MasterPanel/MasterVBox/ExtrasVBox"]
 margin_left = 745.0
-margin_top = 81.0
+margin_top = 78.0
 margin_right = 1486.0
-margin_bottom = 95.0
+margin_bottom = 98.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 text = "Total ECTS: "

@@ -9,7 +9,7 @@
 [ext_resource path="res://LogOutButton.gd" type="Script" id=7]
 [ext_resource path="res://Master.gd" type="Script" id=8]
 
-[node name="Master" type="Control"]
+[node name="WEBDziekanat" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 8 )
@@ -164,13 +164,10 @@ margin_left = 0.0
 margin_top = 578.0
 margin_right = 1906.0
 margin_bottom = 1066.0
-
-[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
-margin_right = 200.0
-margin_bottom = 70.0
 [connection signal="pressed" from="MasterPanel/MasterVBox/TitleBarContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="content_changed" from="MasterPanel/MasterVBox/ContentContainer/ButtonList" to="MasterPanel/MasterVBox/ContentContainer/ContentPanel" method="_on_ButtonList_content_changed"]
 [connection signal="logout" from="MasterPanel/MasterVBox/ContentContainer/ButtonList" to="MasterPanel/MasterVBox" method="_on_ButtonList_logout"]
 [connection signal="pressed" from="MasterPanel/MasterVBox/ContentContainer/ButtonList/ReportCardButton" to="MasterPanel/MasterVBox/ContentContainer/ButtonList" method="_on_ReportCardButton_pressed"]
+[connection signal="pressed" from="MasterPanel/MasterVBox/ContentContainer/ButtonList/PersonalInfoButton" to="MasterPanel/MasterVBox/ContentContainer/ButtonList" method="_on_PersonalInfoButton_pressed"]
 [connection signal="pressed" from="MasterPanel/MasterVBox/ContentContainer/ButtonList/LogOutButton" to="MasterPanel/MasterVBox/ContentContainer/ButtonList" method="_on_LogOutButton_pressed"]
 [connection signal="attempt_login" from="MasterPanel/MasterVBox/Login" to="MasterPanel/MasterVBox" method="_on_Login_attempt_login"]

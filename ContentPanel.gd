@@ -2,7 +2,11 @@ extends PanelContainer
 
 
 var report_card_scene = preload("ReportCard.tscn")
-var scenes = {"report_card": report_card_scene}
+var personal_info_scene = preload("PersonalInfo.tscn")
+var scenes = {
+	"report_card": report_card_scene,
+	"personal_info": personal_info_scene
+	}
 var current_scene
 
 

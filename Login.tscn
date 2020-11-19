@@ -6,10 +6,10 @@
 [node name="Login" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 6.68176
-margin_top = -3.68176
-margin_right = 6.68176
-margin_bottom = -3.68176
+margin_left = 9.20166
+margin_top = -5.18005
+margin_right = 9.20166
+margin_bottom = -5.18005
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 13.0
@@ -53,9 +53,8 @@ size_flags_vertical = 3
 custom_constants/separation = 9
 
 [node name="TitleLabel" type="Label" parent="MasterPanel/MarginContainer/MasterVBox"]
-margin_top = -1.0
 margin_right = 556.0
-margin_bottom = 49.0
+margin_bottom = 50.0
 rect_min_size = Vector2( 0, 50 )
 size_flags_horizontal = 3
 text = "Log in with your student credentials to use WEBDziekanat."
@@ -72,18 +71,19 @@ custom_constants/separation = 8
 alignment = 1
 
 [node name="IDLabel" type="Label" parent="MasterPanel/MarginContainer/MasterVBox/IDVBox"]
-margin_top = 26.0
+margin_top = 23.0
 margin_right = 556.0
-margin_bottom = 40.0
+margin_bottom = 43.0
 size_flags_horizontal = 3
 text = "ID:"
 valign = 2
 
 [node name="IDInput" type="LineEdit" parent="MasterPanel/MarginContainer/MasterVBox/IDVBox"]
-margin_top = 48.0
+margin_top = 51.0
 margin_right = 556.0
-margin_bottom = 78.0
+margin_bottom = 81.0
 rect_min_size = Vector2( 0, 30 )
+size_flags_horizontal = 3
 
 [node name="PasswordVBox" type="VBoxContainer" parent="MasterPanel/MarginContainer/MasterVBox"]
 margin_top = 172.0
@@ -95,15 +95,15 @@ custom_constants/separation = 8
 
 [node name="PasswordLabel" type="Label" parent="MasterPanel/MarginContainer/MasterVBox/PasswordVBox"]
 margin_right = 556.0
-margin_bottom = 14.0
+margin_bottom = 20.0
 size_flags_horizontal = 3
 text = "Password:"
 valign = 1
 
 [node name="PasswordInput" type="LineEdit" parent="MasterPanel/MarginContainer/MasterVBox/PasswordVBox"]
-margin_top = 22.0
+margin_top = 28.0
 margin_right = 556.0
-margin_bottom = 52.0
+margin_bottom = 58.0
 rect_min_size = Vector2( 0, 30 )
 secret = true
 

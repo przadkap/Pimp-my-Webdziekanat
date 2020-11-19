@@ -9,10 +9,6 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_LoginButton_pressed():
-#	id_text = get_node("MasterPanel/MarginContainer/MasterVBox/IDVBox/IDInput").text
-#	password_text = get_node("MasterPanel/MarginContainer/MasterVBox/PasswordVBox/PasswordInput").text
-#	print(id_text)
-#	print(password_text)
 	update_field_text()
 	emit_signal("attempt_login", id_text, password_text)
 

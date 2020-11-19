@@ -23,3 +23,7 @@ func _on_ReportCardButton_pressed():
 
 func _on_LogOutButton_pressed():
 	emit_signal("logout")
+
+
+func _on_PersonalInfoButton_pressed():
+	emit_signal("content_changed", "personal_info")
