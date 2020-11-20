@@ -16,12 +16,15 @@ func _ready():
 		add_child(weekday_container)
 		
 		var weekday_label = Label.new()
-		weekday_label.size_flags_horizontal = SIZE_EXPAND_FILL
-		weekday_label.size_flags_vertical = SIZE_EXPAND_FILL
-		weekday_label.size_flags_stretch_ratio = 2
+#		weekday_label.size_flags_horizontal = SIZE_EXPAND_FILL
+#		weekday_label.size_flags_vertical = SIZE_EXPAND_FILL
+#		weekday_label.size_flags_stretch_ratio = 1
 		weekday_label.align = Label.ALIGN_CENTER
 		weekday_label.valign = Label.VALIGN_CENTER
 		weekday_label.text = weekday
+		
+		weekday_label.rect_min_size.x = 100
+		
 		weekday_container.add_child(weekday_label)
 		
 		var separator = VSeparator.new()
@@ -36,7 +39,7 @@ func _ready():
 				subject_node = PanelContainer.new()
 				var subject_name = Label.new()
 				subject_name.text = subject["name"]
-				subject_name.size_flags_horizontal = SIZE_EXPAND_FILL
+#				subject_name.size_flags_horizontal = SIZE_EXPAND_FILL
 				subject_name.size_flags_vertical = SIZE_EXPAND_FILL
 				subject_name.align = Label.ALIGN_CENTER
 				subject_name.valign = Label.VALIGN_TOP
@@ -44,10 +47,10 @@ func _ready():
 				
 				var subject_hours = Label.new()
 				subject_hours.text = subject["hours"]
-				subject_hours.size_flags_horizontal = SIZE_EXPAND_FILL
+#				subject_hours.size_flags_horizontal = SIZE_EXPAND_FILL
 				subject_hours.size_flags_vertical = SIZE_EXPAND_FILL
 				subject_hours.align = Label.ALIGN_CENTER
-				subject_hours.valign = Label.VALIGN_CENTER
+				subject_hours.valign = Label.VALIGN_BOTTOM
 				subject_node.add_child(subject_hours)
 				
 				if subject["type"] == "lecture":
@@ -56,6 +59,7 @@ func _ready():
 					subject_node.add_stylebox_override("panel", laboratory_stylebox)
 				
 				
+			subject_node.rect_min_size.x = 100 * subject["length"]
 			subject_node.size_flags_horizontal = SIZE_EXPAND_FILL
 			subject_node.size_flags_vertical = SIZE_EXPAND_FILL
 			subject_node.size_flags_stretch_ratio = subject["length"]
