@@ -29,7 +29,7 @@ margin_bottom = 1073.0
 
 [node name="TitleLabel" type="Label" parent="MasterPanel/MasterVBox"]
 margin_top = 67.0
-margin_right = 1486.0
+margin_right = 1485.0
 margin_bottom = 117.0
 rect_min_size = Vector2( 0, 50 )
 size_flags_horizontal = 3
@@ -40,14 +40,14 @@ valign = 1
 
 [node name="MasterHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox"]
 margin_top = 188.0
-margin_right = 1486.0
+margin_right = 1485.0
 margin_bottom = 1066.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 4.75
 
 [node name="FixedInfoMargin" type="MarginContainer" parent="MasterPanel/MasterVBox/MasterHBox"]
-margin_right = 741.0
+margin_right = 740.0
 margin_bottom = 878.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -59,7 +59,7 @@ custom_constants/margin_bottom = 15
 [node name="FixedInfo" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin"]
 margin_left = 15.0
 margin_top = 15.0
-margin_right = 726.0
+margin_right = 725.0
 margin_bottom = 863.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -67,24 +67,24 @@ custom_constants/separation = 20
 script = ExtResource( 2 )
 
 [node name="TitleLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 20.0
 text = "Your personal details:"
 
 [node name="FirstNameVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
 margin_top = 40.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 98.0
 custom_constants/separation = 8
 
 [node name="FirstNameLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/FirstNameVBox"]
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 20.0
 text = "First name:"
 
 [node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/FirstNameVBox"]
 margin_top = 28.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 58.0
 
 [node name="FirstNameEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/FirstNameVBox/InputHBox"]
@@ -96,25 +96,25 @@ editable = false
 
 [node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/FirstNameVBox/InputHBox"]
 margin_left = 357.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 30.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="LastNameVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
 margin_top = 118.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 176.0
 custom_constants/separation = 8
 
 [node name="LastNameLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/LastNameVBox"]
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 20.0
 text = "Last name:"
 
 [node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/LastNameVBox"]
 margin_top = 28.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 58.0
 
 [node name="LastNameEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/LastNameVBox/InputHBox"]
@@ -126,25 +126,25 @@ editable = false
 
 [node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/LastNameVBox/InputHBox"]
 margin_left = 357.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 30.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="IndexVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
 margin_top = 196.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 254.0
 custom_constants/separation = 8
 
 [node name="IndexLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/IndexVBox"]
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 20.0
 text = "Index number:"
 
 [node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/IndexVBox"]
 margin_top = 28.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 58.0
 
 [node name="IndexEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/IndexVBox/InputHBox"]
@@ -156,25 +156,25 @@ editable = false
 
 [node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/IndexVBox/InputHBox"]
 margin_left = 357.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 30.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="BirthDateVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
 margin_top = 274.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 332.0
 custom_constants/separation = 8
 
 [node name="BirthDateLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/BirthDateVBox"]
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 20.0
 text = "Birth date:"
 
 [node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/BirthDateVBox"]
 margin_top = 28.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 58.0
 
 [node name="BirthDateEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/BirthDateVBox/InputHBox"]
@@ -186,25 +186,25 @@ editable = false
 
 [node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/BirthDateVBox/InputHBox"]
 margin_left = 357.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 30.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="PESELVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
 margin_top = 352.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 410.0
 custom_constants/separation = 8
 
 [node name="PESELLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/PESELVBox"]
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 20.0
 text = "PESEL:"
 
 [node name="InputHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/PESELVBox"]
 margin_top = 28.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 58.0
 
 [node name="PESELEdit" type="LineEdit" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/PESELVBox/InputHBox"]
@@ -216,27 +216,27 @@ editable = false
 
 [node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo/PESELVBox/InputHBox"]
 margin_left = 357.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 30.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Control" type="Control" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
 margin_top = 430.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 430.0
 
 [node name="Note" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/FixedInfoMargin/FixedInfo"]
 margin_top = 450.0
-margin_right = 711.0
+margin_right = 710.0
 margin_bottom = 516.0
 text = "Note: You cannot change these details yourself.
 In order to make changes to these details,
 please contact your faculty's Dean's Office."
 
 [node name="EditableInfoMargin" type="MarginContainer" parent="MasterPanel/MasterVBox/MasterHBox"]
-margin_left = 745.0
-margin_right = 1486.0
+margin_left = 744.0
+margin_right = 1485.0
 margin_bottom = 878.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -258,7 +258,7 @@ script = ExtResource( 3 )
 [node name="TitleLabel" type="Label" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo"]
 margin_right = 711.0
 margin_bottom = 20.0
-text = "Correspondance address details:"
+text = "Correspondence address details:"
 
 [node name="StreetVBox" type="VBoxContainer" parent="MasterPanel/MasterVBox/MasterHBox/EditableInfoMargin/EditableInfo"]
 margin_top = 40.0

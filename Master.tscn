@@ -43,6 +43,7 @@ size_flags_vertical = 3
 [node name="HomeButton" type="Button" parent="MasterPanel/MasterVBox/TitleBarContainer"]
 margin_right = 271.0
 margin_bottom = 74.0
+hint_tooltip = "Return to homepage."
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 1.5
 text = "WEBdziekanat"
@@ -67,6 +68,7 @@ text = "Change Language"
 margin_left = 1725.0
 margin_right = 1906.0
 margin_bottom = 74.0
+hint_tooltip = "Quit the application."
 size_flags_horizontal = 3
 text = "Exit"
 icon = ExtResource( 1 )
@@ -97,6 +99,7 @@ script = ExtResource( 4 )
 margin_right = 475.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 0, 60 )
+hint_tooltip = "See what classes do you have weekly."
 size_flags_horizontal = 3
 text = "Timetable"
 
@@ -105,6 +108,7 @@ margin_top = 64.0
 margin_right = 475.0
 margin_bottom = 124.0
 rect_min_size = Vector2( 0, 60 )
+hint_tooltip = "Browse all of your grades."
 size_flags_horizontal = 3
 text = "Report card"
 
@@ -113,27 +117,30 @@ margin_top = 128.0
 margin_right = 475.0
 margin_bottom = 188.0
 rect_min_size = Vector2( 0, 60 )
+hint_tooltip = "Give feedback about attended classes and tutors."
 size_flags_horizontal = 3
 text = "Surveys"
 
-[node name="StudentFeesButton" type="Button" parent="MasterPanel/MasterVBox/ContentContainer/ButtonList"]
+[node name="ObligationsButton" type="Button" parent="MasterPanel/MasterVBox/ContentContainer/ButtonList"]
+visible = false
 margin_top = 192.0
 margin_right = 475.0
 margin_bottom = 252.0
 rect_min_size = Vector2( 0, 60 )
 size_flags_horizontal = 3
-text = "Student Fees"
+text = "Your Obligations"
 
 [node name="PersonalInfoButton" type="Button" parent="MasterPanel/MasterVBox/ContentContainer/ButtonList"]
-margin_top = 256.0
+margin_top = 192.0
 margin_right = 475.0
-margin_bottom = 316.0
+margin_bottom = 252.0
 rect_min_size = Vector2( 0, 60 )
+hint_tooltip = "See your details and edit your correspondence address."
 size_flags_horizontal = 3
 text = "Personal Information"
 
 [node name="Spacer" type="Control" parent="MasterPanel/MasterVBox/ContentContainer/ButtonList"]
-margin_top = 320.0
+margin_top = 256.0
 margin_right = 475.0
 margin_bottom = 911.0
 size_flags_vertical = 3
@@ -164,10 +171,14 @@ margin_left = 0.0
 margin_top = 578.0
 margin_right = 1906.0
 margin_bottom = 1066.0
+[connection signal="login_successful" from="MasterPanel/MasterVBox" to="MasterPanel/MasterVBox/ContentContainer/ContentPanel" method="_on_MasterVBox_login_successful"]
+[connection signal="pressed" from="MasterPanel/MasterVBox/TitleBarContainer/HomeButton" to="MasterPanel/MasterVBox/ContentContainer/ContentPanel" method="_on_HomeButton_pressed"]
 [connection signal="pressed" from="MasterPanel/MasterVBox/TitleBarContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="content_changed" from="MasterPanel/MasterVBox/ContentContainer/ButtonList" to="MasterPanel/MasterVBox/ContentContainer/ContentPanel" method="_on_ButtonList_content_changed"]
 [connection signal="logout" from="MasterPanel/MasterVBox/ContentContainer/ButtonList" to="MasterPanel/MasterVBox" method="_on_ButtonList_logout"]
+[connection signal="pressed" from="MasterPanel/MasterVBox/ContentContainer/ButtonList/TimetableButton" to="MasterPanel/MasterVBox/ContentContainer/ButtonList" method="_on_TimetableButton_pressed"]
 [connection signal="pressed" from="MasterPanel/MasterVBox/ContentContainer/ButtonList/ReportCardButton" to="MasterPanel/MasterVBox/ContentContainer/ButtonList" method="_on_ReportCardButton_pressed"]
+[connection signal="pressed" from="MasterPanel/MasterVBox/ContentContainer/ButtonList/SurveysButton" to="MasterPanel/MasterVBox/ContentContainer/ButtonList" method="_on_SurveysButton_pressed"]
 [connection signal="pressed" from="MasterPanel/MasterVBox/ContentContainer/ButtonList/PersonalInfoButton" to="MasterPanel/MasterVBox/ContentContainer/ButtonList" method="_on_PersonalInfoButton_pressed"]
 [connection signal="pressed" from="MasterPanel/MasterVBox/ContentContainer/ButtonList/LogOutButton" to="MasterPanel/MasterVBox/ContentContainer/ButtonList" method="_on_LogOutButton_pressed"]
 [connection signal="attempt_login" from="MasterPanel/MasterVBox/Login" to="MasterPanel/MasterVBox" method="_on_Login_attempt_login"]

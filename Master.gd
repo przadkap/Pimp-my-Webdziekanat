@@ -16,7 +16,7 @@ func _on_ExitButton_pressed():
 
 	dark_mask.show()
 	exit_dialog = ConfirmationDialog.new()
-	exit_dialog.dialog_text = "Are you sure you want to exit?\nChanges you made will be saved."
+	exit_dialog.dialog_text = "Are you sure you want to exit?\nUnsaved changes will be lost."
 	add_child(exit_dialog)
 	exit_dialog.popup_centered(Vector2(1, 1))
 	exit_dialog.connect("confirmed", self, "on_confirmed_exit")

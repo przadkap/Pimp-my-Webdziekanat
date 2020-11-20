@@ -1,5 +1,7 @@
 extends VBoxContainer
 
+signal login_successful
+
 func _ready():
 	if(GlobalInfo.current_user_id == null):
 		toggle_login()
@@ -18,6 +20,7 @@ func _on_Login_attempt_login(id, password):
 					toggle_login()
 					$Login.clear_inputs(false)
 					show_popup("Login successful.", true)
+					emit_signal("login_successful")
 				else:
 					$Login.clear_inputs(false)
 					show_popup("Invalid credentials.", false)

@@ -5,6 +5,22 @@ enum POPUP_POS {
 	DOWN
 }
 
+
+var month_days = {
+	"1": 31,
+	"2": 28,
+	"3": 31,
+	"4": 30,
+	"5": 31,
+	"6": 30,
+	"7": 31,
+	"8": 31,
+	"9": 30,
+	"10": 31,
+	"11": 30,
+	"12": 31
+}
+
 func _ready():
 	pass # Replace with function body.
 
@@ -34,3 +50,36 @@ func show_popup(text, is_good, position):
 	elif position == POPUP_POS.DOWN:
 		timed_popup.set_position(Vector2((get_viewport().size.x / 2) - 150, (get_viewport().size.y / 2) + 300))
 	timed_popup.show()
+
+
+func calculate_days_passed(today, valid_to):
+	if int(today["year"]) == int(valid_to["year"]):
+		var days_to_today = 0
+		var days_to_expire = 0
+		for month in month_days.keys():
+			if int(month) < int(today["month"]):
+				days_to_today += month_days[month]
+			elif int(month) == int(today["month"]):
+				days_to_today += int(today["day"])
+				
+			if int(month) < int(valid_to["month"]):
+				days_to_expire += month_days[month]
+			elif int(month) == int(valid_to["month"]):
+				days_to_expire += int(valid_to["day"])
+		
+		return days_to_expire - days_to_today
+	
+	elif int(today["year"]) < int(valid_to["year"]):
+		var days_valid = 0
+		for month in month_days.keys():
+			if int(month) == int(today["month"]):
+				days_valid += month_days[month] - int(today["day"])
+			elif int(month) > int(today["month"]):
+				days_valid += month_days[month] 
+			if int(month) < int(valid_to["month"]):
+				days_valid += month_days[month]
+			elif int(month) == int(valid_to["month"]):
+				days_valid += int(valid_to["day"])
+		return days_valid
+	else:
+		return -365

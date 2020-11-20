@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Surveys.gd" type="Script" id=1]
+
+[node name="Surveys" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.37842
+margin_right = 2.37842
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MasterPanel" type="PanelContainer" parent="."]
+anchor_right = 0.78125
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="MasterVBox" type="VBoxContainer" parent="MasterPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1493.0
+margin_bottom = 1073.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TitleLabel" type="Label" parent="MasterPanel/MasterVBox"]
+margin_top = 56.0
+margin_right = 1486.0
+margin_bottom = 76.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Surveys"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MasterPanel/MasterVBox"]
+margin_top = 136.0
+margin_right = 1486.0
+margin_bottom = 1066.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 7.0
+custom_constants/margin_right = 15
+custom_constants/margin_top = 15
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 15
+
+[node name="Surveys" type="VBoxContainer" parent="MasterPanel/MasterVBox/MarginContainer"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 1471.0
+margin_bottom = 915.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 7.0
+script = ExtResource( 1 )

@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Weekdays.gd" type="Script" id=1]
+
+[node name="Timetable" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="MasterPanel" type="PanelContainer" parent="."]
+anchor_right = 0.78125
+anchor_bottom = 1.0
+margin_right = 300.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="MasterVBox" type="VBoxContainer" parent="MasterPanel"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1793.0
+margin_bottom = 1073.0
+
+[node name="TitleLabel" type="Label" parent="MasterPanel/MasterVBox"]
+margin_top = 49.0
+margin_right = 1786.0
+margin_bottom = 69.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+text = "Timetable"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MasterPanel/MasterVBox"]
+margin_top = 122.0
+margin_right = 1786.0
+margin_bottom = 1066.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.0
+custom_constants/margin_right = 15
+custom_constants/margin_top = 15
+custom_constants/margin_left = 15
+custom_constants/margin_bottom = 15
+
+[node name="Weekdays" type="VBoxContainer" parent="MasterPanel/MasterVBox/MarginContainer"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 1771.0
+margin_bottom = 929.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 10.0
+custom_constants/separation = 10
+script = ExtResource( 1 )

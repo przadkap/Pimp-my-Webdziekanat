@@ -7,11 +7,7 @@ var subject_header_data = {"name": "Name", "grade": "Grade", "tutor": "Tutor", "
 const SubjectContainer = preload("SubjectContainer.gd")
 
 func _ready():
-#	var file = File.new()
-#	file.open("res://grades.json", file.READ)
-#	var content = file.get_as_text()
-#	var content_json = JSON.parse(content)
-#	grade_data = content_json.result
+
 	grade_data = GlobalFunctions.json_file_to_dict("res://grades.json")
 	for semester in grade_data[user]:
 		

@@ -1,0 +1,5 @@
+[
+    {"subject": "Java Fundamentals", "tutor": "dr inż. Bartosz Sakowicz", "status": "done"},
+    {"subject": "Object Oriented Programming in C++", "tutor": "dr inż. Grzegorz Jabłoński", "status": "done"},
+    {"subject": "Interactive Web Applications", "tutor": "dr inż. Rafał Kotas", "status": "pending"},
+]

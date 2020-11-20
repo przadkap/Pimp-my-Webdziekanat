@@ -1,0 +1,58 @@
+{
+  "Monday": [
+    {"type": "free", "length": 2},
+    {"type": "lecture", "length": 2, "name": "Embedded Systems", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 2},
+    {"type": "laboratory", "length": 2, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "lecture", "length": 1, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 3},
+  ],
+  "Tuesday": [
+    {"type": "free", "length": 2},
+    {"type": "lecture", "length": 2, "name": "Embedded Systems", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 2},
+    {"type": "laboratory", "length": 2, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "lecture", "length": 1, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 3},
+  ],
+  "Wednesday": [
+    {"type": "free", "length": 2},
+    {"type": "lecture", "length": 2, "name": "Embedded Systems", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 2},
+    {"type": "laboratory", "length": 2, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "lecture", "length": 1, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 3},
+  ],
+  "Thursday": [
+    {"type": "free", "length": 2},
+    {"type": "lecture", "length": 2, "name": "Embedded Systems", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 2},
+    {"type": "laboratory", "length": 2, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "lecture", "length": 1, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 3},
+  ],
+  "Friday": [
+    {"type": "free", "length": 2},
+    {"type": "lecture", "length": 2, "name": "Embedded Systems", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 2},
+    {"type": "laboratory", "length": 2, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "lecture", "length": 1, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 3},
+  ],
+  "Saturday": [
+    {"type": "free", "length": 2},
+    {"type": "lecture", "length": 2, "name": "Embedded Systems", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 2},
+    {"type": "laboratory", "length": 2, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "lecture", "length": 1, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 3},
+  ],
+  "Sunday": [
+    {"type": "free", "length": 2},
+    {"type": "lecture", "length": 2, "name": "Embedded Systems", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 2},
+    {"type": "laboratory", "length": 2, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "lecture", "length": 1, "name": "Computer Aided Design", "hours": "8:15 - 10:00"},
+    {"type": "free", "length": 3},
+  ]
+}

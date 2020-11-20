@@ -27,3 +27,11 @@ func _on_LogOutButton_pressed():
 
 func _on_PersonalInfoButton_pressed():
 	emit_signal("content_changed", "personal_info")
+
+
+func _on_TimetableButton_pressed():
+	emit_signal("content_changed", "timetable")
+
+
+func _on_SurveysButton_pressed():
+	emit_signal("content_changed", "surveys")
