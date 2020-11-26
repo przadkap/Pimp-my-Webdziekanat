@@ -2,7 +2,6 @@ extends VBoxContainer
 
 var timetable = {}
 onready var path = "res://timetables/" + str(GlobalInfo.current_user_id) + ".json"
-#onready var path = "res://timetables/223971.json"
 
 var lecture_stylebox = preload("res://lecture.tres")
 var laboratory_stylebox = preload("res://laboratory.tres")
@@ -10,15 +9,15 @@ var laboratory_stylebox = preload("res://laboratory.tres")
 func _ready():
 	timetable = GlobalFunctions.json_file_to_dict(path)
 	for weekday in timetable.keys():
+		if weekday == "Saturday" or weekday == "Sunday":
+			continue
 		var weekday_container = HBoxContainer.new()
 		weekday_container.size_flags_horizontal = SIZE_EXPAND_FILL
 		weekday_container.size_flags_vertical = SIZE_EXPAND_FILL
 		add_child(weekday_container)
 		
 		var weekday_label = Label.new()
-#		weekday_label.size_flags_horizontal = SIZE_EXPAND_FILL
-#		weekday_label.size_flags_vertical = SIZE_EXPAND_FILL
-#		weekday_label.size_flags_stretch_ratio = 1
+
 		weekday_label.align = Label.ALIGN_CENTER
 		weekday_label.valign = Label.VALIGN_CENTER
 		weekday_label.text = weekday
@@ -35,23 +34,21 @@ func _ready():
 			if subject.type == "free":
 				subject_node = Control.new()
 			else:
-#				 subject.type == "lecture":
 				subject_node = PanelContainer.new()
-				var subject_name = Label.new()
-				subject_name.text = subject["name"]
-#				subject_name.size_flags_horizontal = SIZE_EXPAND_FILL
-				subject_name.size_flags_vertical = SIZE_EXPAND_FILL
-				subject_name.align = Label.ALIGN_CENTER
-				subject_name.valign = Label.VALIGN_TOP
+				var subject_name = RichTextLabel.new()
+				subject_name.bbcode_enabled = true
+				subject_name.push_align(RichTextLabel.ALIGN_CENTER)
+				
+				if subject["length"] > 1:
+					subject_name.append_bbcode("\n")
+				
+				subject_name.append_bbcode(subject["name"])
+				subject_name.append_bbcode("\n")
+				subject_name.push_color("#848991")
+				subject_name.append_bbcode(subject["hours"])
+				subject_name.scroll_active = false
 				subject_node.add_child(subject_name)
 				
-				var subject_hours = Label.new()
-				subject_hours.text = subject["hours"]
-#				subject_hours.size_flags_horizontal = SIZE_EXPAND_FILL
-				subject_hours.size_flags_vertical = SIZE_EXPAND_FILL
-				subject_hours.align = Label.ALIGN_CENTER
-				subject_hours.valign = Label.VALIGN_BOTTOM
-				subject_node.add_child(subject_hours)
 				
 				if subject["type"] == "lecture":
 					subject_node.add_stylebox_override("panel", lecture_stylebox)
@@ -71,7 +68,3 @@ func _ready():
 			
 			
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
+[ext_resource path="res://TitleInter.tres" type="DynamicFont" id=1]
 [ext_resource path="res://SemesterTabs.gd" type="Script" id=2]
+[ext_resource path="res://MidsizeInter.tres" type="DynamicFont" id=3]
 
 [node name="ReportCard" type="Control"]
 anchor_right = 1.0
@@ -34,14 +36,11 @@ margin_right = 1486.0
 margin_bottom = 176.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_fonts/normal_font = ExtResource( 1 )
 bbcode_enabled = true
 bbcode_text = "
-
-
 [center]Your Report Card[/center]"
 text = "
-
-
 Your Report Card"
 scroll_active = false
 
@@ -63,18 +62,20 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TotalGPA" type="Label" parent="MasterPanel/MasterVBox/ExtrasVBox"]
-margin_top = 78.0
+margin_top = 69.0
 margin_right = 741.0
-margin_bottom = 98.0
+margin_bottom = 107.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
+custom_fonts/font = ExtResource( 3 )
 text = "Total GPA:"
 
 [node name="TotalECTS" type="Label" parent="MasterPanel/MasterVBox/ExtrasVBox"]
 margin_left = 745.0
-margin_top = 78.0
+margin_top = 69.0
 margin_right = 1486.0
-margin_bottom = 98.0
+margin_bottom = 107.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
+custom_fonts/font = ExtResource( 3 )
 text = "Total ECTS: "

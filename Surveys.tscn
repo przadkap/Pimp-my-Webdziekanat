@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Surveys.gd" type="Script" id=1]
+[ext_resource path="res://TitleInter.tres" type="DynamicFont" id=2]
 
 [node name="Surveys" type="Control"]
 anchor_right = 1.0
@@ -27,11 +28,12 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TitleLabel" type="Label" parent="MasterPanel/MasterVBox"]
-margin_top = 56.0
+margin_top = 41.0
 margin_right = 1486.0
-margin_bottom = 76.0
+margin_bottom = 90.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
+custom_fonts/font = ExtResource( 2 )
 text = "Surveys"
 align = 1
 valign = 1
