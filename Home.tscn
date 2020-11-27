@@ -69,14 +69,14 @@ custom_constants/separation = 10
 
 [node name="ProgressBars" type="HBoxContainer" parent="MasterPanel/MasterVBox/Content/ContentVBox"]
 margin_right = 1456.0
-margin_bottom = 500.0
-rect_min_size = Vector2( 0, 500 )
+margin_bottom = 300.0
+rect_min_size = Vector2( 0, 300 )
 size_flags_horizontal = 3
 custom_constants/separation = 12
 
 [node name="IDPanel" type="PanelContainer" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars"]
 margin_right = 722.0
-margin_bottom = 500.0
+margin_bottom = 300.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/panel = ExtResource( 1 )
@@ -85,14 +85,14 @@ custom_styles/panel = ExtResource( 1 )
 margin_left = 15.0
 margin_top = 15.0
 margin_right = 707.0
-margin_bottom = 485.0
+margin_bottom = 285.0
 custom_constants/separation = 8
 script = ExtResource( 2 )
 
 [node name="IDInfoLabel" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/IDPanel/IDVBox"]
-margin_top = 56.0
+margin_top = 6.0
 margin_right = 692.0
-margin_bottom = 105.0
+margin_bottom = 55.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 custom_fonts/font = ExtResource( 4 )
@@ -101,9 +101,9 @@ align = 1
 valign = 1
 
 [node name="StatusHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/IDPanel/IDVBox"]
-margin_top = 169.0
+margin_top = 69.0
 margin_right = 692.0
-margin_bottom = 189.0
+margin_bottom = 89.0
 
 [node name="StatusLabel" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/IDPanel/IDVBox/StatusHBox"]
 margin_right = 56.0
@@ -118,21 +118,21 @@ margin_bottom = 20.0
 text = "VALID"
 
 [node name="RenewedLabel" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/IDPanel/IDVBox"]
-margin_top = 197.0
+margin_top = 97.0
 margin_right = 692.0
-margin_bottom = 217.0
+margin_bottom = 117.0
 text = "Last Renewed:"
 
 [node name="ValidUntilLabel" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/IDPanel/IDVBox"]
-margin_top = 225.0
+margin_top = 125.0
 margin_right = 692.0
-margin_bottom = 245.0
+margin_bottom = 145.0
 text = "Valid until:"
 
 [node name="ValidBarLabel" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/IDPanel/IDVBox"]
-margin_top = 253.0
+margin_top = 153.0
 margin_right = 692.0
-margin_bottom = 273.0
+margin_bottom = 173.0
 size_flags_vertical = 0
 text = "Valid for:"
 valign = 1
@@ -141,9 +141,9 @@ __meta__ = {
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/IDPanel/IDVBox"]
-margin_top = 281.0
+margin_top = 181.0
 margin_right = 692.0
-margin_bottom = 331.0
+margin_bottom = 231.0
 rect_min_size = Vector2( 0, 50 )
 size_flags_horizontal = 3
 size_flags_vertical = 2
@@ -166,15 +166,15 @@ __meta__ = {
 }
 
 [node name="Note" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/IDPanel/IDVBox"]
-margin_top = 450.0
+margin_top = 250.0
 margin_right = 692.0
-margin_bottom = 470.0
+margin_bottom = 270.0
 text = "You can renew your ID card in your faculty's Dean's office."
 
 [node name="InsurancePanel" type="PanelContainer" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars"]
 margin_left = 734.0
 margin_right = 1456.0
-margin_bottom = 500.0
+margin_bottom = 300.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/panel = ExtResource( 1 )
@@ -183,14 +183,14 @@ custom_styles/panel = ExtResource( 1 )
 margin_left = 15.0
 margin_top = 15.0
 margin_right = 707.0
-margin_bottom = 485.0
+margin_bottom = 285.0
 custom_constants/separation = 8
 script = ExtResource( 3 )
 
 [node name="InsuranceInfoLabel" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/InsurancePanel/InsuranceVBox"]
-margin_top = 56.0
+margin_top = 6.0
 margin_right = 692.0
-margin_bottom = 105.0
+margin_bottom = 55.0
 size_flags_horizontal = 3
 size_flags_vertical = 6
 custom_fonts/font = ExtResource( 4 )
@@ -199,9 +199,9 @@ align = 1
 valign = 1
 
 [node name="StatusHBox" type="HBoxContainer" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/InsurancePanel/InsuranceVBox"]
-margin_top = 169.0
+margin_top = 69.0
 margin_right = 692.0
-margin_bottom = 189.0
+margin_bottom = 89.0
 
 [node name="StatusLabel" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/InsurancePanel/InsuranceVBox/StatusHBox"]
 margin_right = 56.0
@@ -216,21 +216,21 @@ margin_bottom = 20.0
 text = "EXPIRED"
 
 [node name="RenewedLabel" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/InsurancePanel/InsuranceVBox"]
-margin_top = 197.0
+margin_top = 97.0
 margin_right = 692.0
-margin_bottom = 217.0
+margin_bottom = 117.0
 text = "Last Renewed:"
 
 [node name="ValidUntilLabel" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/InsurancePanel/InsuranceVBox"]
-margin_top = 225.0
+margin_top = 125.0
 margin_right = 692.0
-margin_bottom = 245.0
+margin_bottom = 145.0
 text = "Valid until:"
 
 [node name="ValidBarLabel" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/InsurancePanel/InsuranceVBox"]
-margin_top = 253.0
+margin_top = 153.0
 margin_right = 692.0
-margin_bottom = 273.0
+margin_bottom = 173.0
 size_flags_vertical = 0
 text = "Valid for:"
 valign = 1
@@ -239,9 +239,9 @@ __meta__ = {
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/InsurancePanel/InsuranceVBox"]
-margin_top = 281.0
+margin_top = 181.0
 margin_right = 692.0
-margin_bottom = 331.0
+margin_bottom = 231.0
 rect_min_size = Vector2( 0, 50 )
 size_flags_horizontal = 3
 size_flags_vertical = 2
@@ -264,23 +264,23 @@ __meta__ = {
 }
 
 [node name="Note" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox/ProgressBars/InsurancePanel/InsuranceVBox"]
-margin_top = 450.0
+margin_top = 250.0
 margin_right = 692.0
-margin_bottom = 470.0
+margin_bottom = 270.0
 text = "Check your university mail for insurance renewal offers."
 
 [node name="AnnouncementsLabel" type="Label" parent="MasterPanel/MasterVBox/Content/ContentVBox"]
-margin_top = 509.0
+margin_top = 310.0
 margin_right = 1456.0
-margin_bottom = 569.0
+margin_bottom = 370.0
 rect_min_size = Vector2( 0, 60 )
 custom_fonts/font = ExtResource( 4 )
 text = "Announcements:"
 
 [node name="Announcement1" type="PanelContainer" parent="MasterPanel/MasterVBox/Content/ContentVBox"]
-margin_top = 580.0
+margin_top = 380.0
 margin_right = 1456.0
-margin_bottom = 650.0
+margin_bottom = 450.0
 rect_min_size = Vector2( 0, 70 )
 size_flags_horizontal = 3
 custom_styles/panel = SubResource( 1 )
@@ -316,9 +316,9 @@ align = 1
 valign = 1
 
 [node name="Announcement2" type="PanelContainer" parent="MasterPanel/MasterVBox/Content/ContentVBox"]
-margin_top = 660.0
+margin_top = 460.0
 margin_right = 1456.0
-margin_bottom = 730.0
+margin_bottom = 530.0
 rect_min_size = Vector2( 0, 70 )
 size_flags_horizontal = 3
 custom_styles/panel = SubResource( 1 )

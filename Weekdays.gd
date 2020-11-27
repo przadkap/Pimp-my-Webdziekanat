@@ -31,21 +31,26 @@ func _ready():
 		
 		for subject in timetable[weekday]:
 			var subject_node
-			if subject.type == "free":
+			if subject["type"] == "free":
 				subject_node = Control.new()
 			else:
 				subject_node = PanelContainer.new()
+				subject_node.hint_tooltip = subject["type"] + " " + subject["hours"]
+				subject_node.mouse_filter = Control.MOUSE_FILTER_PASS
+				
 				var subject_name = RichTextLabel.new()
 				subject_name.bbcode_enabled = true
 				subject_name.push_align(RichTextLabel.ALIGN_CENTER)
+				subject_name.hint_tooltip = subject["type"] + " " + subject["hours"]
+				subject_name.mouse_filter = Control.MOUSE_FILTER_PASS
 				
 				if subject["length"] > 1:
 					subject_name.append_bbcode("\n")
 				
 				subject_name.append_bbcode(subject["name"])
 				subject_name.append_bbcode("\n")
-				subject_name.push_color("#848991")
-				subject_name.append_bbcode(subject["hours"])
+#				subject_name.push_color("#848991")
+#				subject_name.append_bbcode(subject["hours"])
 				subject_name.scroll_active = false
 				subject_node.add_child(subject_name)
 				
@@ -60,6 +65,8 @@ func _ready():
 			subject_node.size_flags_horizontal = SIZE_EXPAND_FILL
 			subject_node.size_flags_vertical = SIZE_EXPAND_FILL
 			subject_node.size_flags_stretch_ratio = subject["length"]
+			
+			
 			weekday_container.add_child(subject_node)
 		if weekday != "Sunday":
 			var weekday_separator = HSeparator.new()

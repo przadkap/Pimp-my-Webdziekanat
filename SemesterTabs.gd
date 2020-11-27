@@ -25,11 +25,15 @@ func _ready():
 		
 		total_ECTS += 30
 		
-		var semester_container = VBoxContainer.new()
+		var scroll_container = ScrollContainer.new()
 		
-		semester_container.name = "Semester " + arabic_to_roman(int(semester["semester_no"]))
-		semester_container.size_flags_horizontal = SIZE_EXPAND
-		add_child(semester_container)
+		scroll_container.size_flags_horizontal = SIZE_EXPAND_FILL
+		scroll_container.name = "Semester " + arabic_to_roman(int(semester["semester_no"]))
+		
+		var semester_container = VBoxContainer.new()
+		semester_container.size_flags_horizontal = SIZE_EXPAND_FILL
+		scroll_container.add_child(semester_container)
+		add_child(scroll_container)
 		
 		var subject_header = SubjectContainer.new(subject_header_data)
 		subject_header.set_custom_minimum_size(Vector2(0, 50))
